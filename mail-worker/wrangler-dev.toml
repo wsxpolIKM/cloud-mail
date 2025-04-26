@@ -1,0 +1,30 @@
+name = "cloud-mail-dev"
+main = "src/index.js"
+compatibility_date = "2025-04-09"
+
+[observability]
+enabled = true
+
+[dev]
+ip = "0.0.0.0"
+
+[[d1_databases]]
+binding = "db"
+database_name = "email"
+database_id = "xxxxx"
+
+[[kv_namespaces]]
+binding = "kv"
+id = "xxxxx"
+
+[[r2_buckets]]
+binding = "r2"
+bucket_name = "email"
+
+[vars]
+domain = ["xxxxx", "xxxxx"]
+admin = "xxxxx"
+r2_domain = "xxxxx"
+jwt_secret = "xxxxx"
+site_key = "xxxxx"
+secret_key = "xxxxx"
