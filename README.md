@@ -44,7 +44,7 @@
 
 - **⚙️功能开关**：可以对注册，添加等功能关闭和开启，设为私人站点
 
-- **🤖人机验证**：集成Turnstile人机验证，防止伪人批量注册
+- **🤖人机验证**：集成Turnstile人机验证，防止人机批量注册
 
 - **📜更多功能**：正在开发中...
 
@@ -84,11 +84,11 @@ bucket_name = ""	        #r2对象存储桶的名字
 	
 
 [assets]
-binding = "assets"		#静态资源存放位置默认不可修改
+binding = "assets"		#静态资源绑定名默认不可修改
 directory = "./dist"	        #前端vue项目打包的静态资源存放位置,默认dist
 
 [vars]
-domain = []			#邮件域名可可配置多个 示例: ["example1.com","example2.com"]
+domain = []			#邮件域名可以配置多个 示例: ["example1.com","example2.com"]
 admin = ""		        #管理员的邮箱 示例: admin@example.com
 r2_domain = ""			#r2对象存储桶的访问域名
 jwt_secret = ""			#jwt令牌的密钥,随便填一串字符串
@@ -105,13 +105,13 @@ secret_key = ""			#Turnstile人机验证的后端密钥
 cloud-mail
 ├── mail-worker				#worker后端项目
 │   ├── src                  
-│   │   ├── api	 			#后端接口层			
+│   │   ├── api	 			#接口层			
 │   │   ├── const  			#常量
 │   │   ├── email			#邮件接收
 │   │   ├── entity			#数据库实体层
 │   │   ├── error			#自定义异常
 │   │   ├── hono			#web框架配置 拦截器等
-│   │   ├── init			#项目启动时初始配置
+│   │   ├── init			#项目启动表创建 缓存初始化等
 │   │   ├── model			#响应体数据封装
 │   │   ├── security			#身份认证层
 │   │   ├── service			#服务层

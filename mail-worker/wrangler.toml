@@ -19,7 +19,7 @@ enabled = true
 #bucket_name = ""		#r2对象存储桶的名字
 
 [assets]
-binding = "assets"		#静态资源存放位置默认不可修改
+binding = "assets"		#静态资源绑定名默认不可修改
 directory = "./dist"	#前端vue项目打包的静态资源存放位置,默认dist
 
 [vars]

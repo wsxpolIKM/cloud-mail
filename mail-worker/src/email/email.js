@@ -1,7 +1,6 @@
 import PostalMime from 'postal-mime';
 import emailService from '../service/email-service';
 import accountService from '../service/account-service';
-import { isDel } from '../const/entity-const';
 import settingService from '../service/setting-service';
 import attService from '../service/att-service';
 import r2Service from '../service/r2-service';
