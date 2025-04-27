@@ -29,6 +29,11 @@
       </el-menu>
     </div>
   </el-scrollbar>
+  <div class="github">
+    <a href="https://github.com/LaziestRen/cloud-mail">
+      <Icon icon="codicon:github-inverted" width="30" height="30" />
+    </a>
+  </div>
 </template>
 
 <script setup>
@@ -128,5 +133,16 @@ const route = useRoute();
 
 .scroll {
   box-shadow: 6px 0 20px rgba(0, 21, 41, 0.35);
+}
+
+.github {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  a{
+    color: #fff;
+  }
 }
 </style>

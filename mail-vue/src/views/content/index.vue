@@ -45,7 +45,7 @@
               </div>
               <div>{{ formatBytes(att.size) }}</div>
               <div class="down-icon att-icon">
-                <a :href="cvtR2Url(att.key)" download>
+                <a style="color: #333" :href="cvtR2Url(att.key)" download>
                   <Icon icon="system-uicons:push-down" width="22" height="22"/>
                 </a>
               </div>
@@ -304,4 +304,5 @@ const handleDelete = () => {
     }
   }
 }
+
 </style>
