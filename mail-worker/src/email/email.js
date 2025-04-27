@@ -43,6 +43,10 @@ export async function email(message, env, ctx) {
 
 		const emailRow = await emailService.receive({ env }, params);
 
+		if (!env.r2) {
+			console.warn('r2对象存储未配置, 附件取消保存');
+			return;
+		}
 
 		if (email.attachments.length > 0) {
 
@@ -57,11 +61,6 @@ export async function email(message, env, ctx) {
 			});
 
 			await attService.addAtt({ env }, attachments);
-
-			if (!env.r2) {
-				console.log('r2对象存储未配置, 附件取消保存');
-				return;
-			}
 
 			for (let attachment of attachments) {
 				await r2Service.putObj({ env }, attachment.key, attachment.content, {
