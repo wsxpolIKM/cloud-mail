@@ -260,7 +260,7 @@
                     <Icon icon="logos:telegram" width="30" height="30"/>
                   </template>
                 </el-button>
-                <el-button @click="jump('https://github.com/arexing/cloud-mail')">
+                <el-button @click="jump('https://github.com/AreXing/cloud-mail')">
                   github
                   <template #icon>
                     <Icon icon="codicon:github-inverted" width="22" height="22" />
